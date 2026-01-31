@@ -38,7 +38,7 @@ Route::post('/logout', function () {
 // Root route - redirect to home if logged in, otherwise to login
 Route::get('/', function () {
     if (session('user')) {
-        return view('pages.dashboard.ecommerce', ['title' => 'Dashboard']);
+        return view('pages.dashboard.index', ['title' => 'Dashboard']);
     }
 
     return redirect('/login');
@@ -48,11 +48,11 @@ Route::get('/', function () {
 Route::middleware('auth.custom')->group(function () {
     // dashboard pages
     Route::get('/dashboard', function () {
-        return view('pages.dashboard.ecommerce', ['title' => 'E-commerce Dashboard']);
+        return view('pages.dashboard.index', ['title' => 'Dashboard']);
     })->name('dashboard');
 
     if (session('user')) {
-        return view('auth.home', ['title' => 'Home']);
+        return view('pages.dashboard.index', ['title' => 'Dashboard']);
     }
 
     return redirect('/login');
@@ -62,7 +62,7 @@ Route::middleware('auth.custom')->group(function () {
 Route::middleware('auth.custom')->group(function () {
     // dashboard pages
     Route::get('/dashboard', function () {
-        return view('pages.dashboard.ecommerce', ['title' => 'E-commerce Dashboard']);
+        return view('pages.dashboard.index', ['title' => 'E-commerce Dashboard']);
     })->name('dashboard');
 
    

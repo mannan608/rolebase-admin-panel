@@ -8,14 +8,7 @@
                 <div>
                     <h1 class="text-4xl font-bold mb-2">Welcome, {{ session('user')->name ?? 'User' }}! 👋</h1>
                     <p class="text-blue-100">You are successfully logged in to TailAdmin Dashboard</p>
-                </div>
-                <form action="/logout" method="POST" class="inline">
-                    @csrf
-                    <button type="submit"
-                        class="bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-6 rounded-lg transition duration-200">
-                        Logout
-                    </button>
-                </form>
+                </div>                
             </div>
         </div>
 

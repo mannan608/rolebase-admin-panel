@@ -113,11 +113,11 @@
                 </button>
 
                 <!-- Notification Dropdown -->
-                {{-- <x-header.notification-dropdown /> --}}
+                <x-notification-dropdown />
             </div>
 
             <!-- User Dropdown -->
-            {{-- <x-header.user-dropdown /> --}}
+            <x-user-dropdown />
         </div>
     </div>
 </header>

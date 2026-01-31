@@ -28,7 +28,7 @@
         <span class="mr-3 overflow-hidden rounded-full h-11 w-11">
             <img src="{{ $avatarUrl }}" alt="User" />
         </span>
-        
+
     </button>
 
     <!-- Dropdown Start -->
@@ -65,7 +65,7 @@
         </ul>
 
         <!-- Sign Out -->
-        <form method="POST" action="#" class="pt-3">
+        <form action="/logout" method="POST" class="inline">
             @csrf
             <button
                 class="shadow-theme-xs flex w-full items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200">
